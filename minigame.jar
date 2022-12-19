@@ -15,8 +15,6 @@ import javax.swing.event.HyperlinkEvent;
 
 public class GUI{
 	
-	static int i;
-	
 		//main method
 		public static void main(String []args){
 			

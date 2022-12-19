@@ -1,0 +1,99 @@
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.io.IOException;
+import java.lang.annotation.Repeatable;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.Random;
+import javax.naming.event.NamespaceChangeListener;
+import javax.swing.*;
+import javax.swing.event.HyperlinkEvent;
+
+public class GUI{
+	
+	static int i;
+	
+		//main method
+		public static void main(String []args){
+			
+				//Create a GUI
+				JFrame winFrame = new JFrame("This is a little game");
+				winFrame.setVisible(true);
+				winFrame.setSize(480,360);
+				winFrame.setLayout(null);
+				winFrame.setResizable(false);
+				
+				//Create Label
+				JLabel titleJLabel = new JLabel("Do you wanna be my girlfriend? <3");
+				winFrame.add(titleJLabel);
+				titleJLabel.setVisible(true);
+				titleJLabel.setBounds(140,30,200,180);
+				
+				//Create Button1 and Mouse Actions
+				JButton btnButton1 = new JButton("YES!");
+				winFrame.add(btnButton1);
+				btnButton1.setVisible(true);
+				btnButton1.setBounds(40,180,100,50);
+				btnButton1.addActionListener(new ActionListener() {
+					
+					@Override
+					
+					//Open a MsgDialog
+					public void actionPerformed(ActionEvent e) {
+						JOptionPane.showMessageDialog(null,"Thank you... i love you <3");
+						System.exit(0);
+					}
+				});
+				
+				//Create Button2, Mouse Events and other actions
+				JButton btnButton2 = new JButton("NO!");
+				winFrame.add(btnButton2);
+				btnButton2.setVisible(true);
+				btnButton2.setBounds(320,180,100,50);
+				btnButton2.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						JOptionPane.showMessageDialog(null,"Oh well... see ya later");
+						JOptionPane.showMessageDialog(null,"Based on TikTok. Algorithm created by DBMO_3");
+						System.exit(0);
+					}
+				});
+				
+				btnButton2.addMouseListener(new MouseListener() {
+					
+					@Override
+					public void mouseReleased(MouseEvent e) {
+						// NONE
+						
+					}
+					
+					@Override
+					public void mousePressed(MouseEvent e) {
+						// NONE
+						
+					}
+					
+					@Override
+					public void mouseExited(MouseEvent e) {
+						// NONE
+						
+					}
+					
+					@Override
+					public void mouseEntered(MouseEvent e) {
+						Random random = new Random();
+						btnButton2.setLocation(random.nextInt(320),random.nextInt(320));
+					}
+					
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						
+					}
+				});
+			}
+		
+}

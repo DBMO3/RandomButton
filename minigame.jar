@@ -6,13 +6,10 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.IOException;
-import java.lang.annotation.Repeatable;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Random;
-import javax.naming.event.NamespaceChangeListener;
 import javax.swing.*;
-import javax.swing.event.HyperlinkEvent;
 
 public class GUI{
 

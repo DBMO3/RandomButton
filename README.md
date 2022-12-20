@@ -1,1 +1,1 @@
-# Minigame based on TikTok :)
+# Minigame based from TikTok video :)

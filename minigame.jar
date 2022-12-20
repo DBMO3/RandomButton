@@ -1,15 +1,17 @@
-//Based on TikTok video.
-//Created by DBMO3
+//Based on a TikTok Video :D
+//DBMO3
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.Random;
 import javax.swing.*;
 
-public class GUI{
+public class Frame{
 
 		//main method
 		public static void main(String []args){
@@ -54,7 +56,15 @@ public class GUI{
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						JOptionPane.showMessageDialog(null,"Oh well... see ya later");
-						JOptionPane.showMessageDialog(null,"Based on TikTok. Algorithm created by DBMO_3");
+						JOptionPane.showMessageDialog(null,"Based on a TikTok video. Created by DBMO3");
+						JOptionPane.showMessageDialog(null,"Please donate to my PayPal for more programs like this :D.");
+						try {
+							Desktop.getDesktop().browse(new URI("https://paypal.me/dbm360?country.x=MX&locale.x=es_XC"));
+						} catch (IOException e1) {
+							e1.printStackTrace();
+						} catch (URISyntaxException e1) {
+							e1.printStackTrace();
+						}
 						System.exit(0);
 					}
 				});
